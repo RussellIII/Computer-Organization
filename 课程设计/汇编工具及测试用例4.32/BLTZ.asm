@@ -3,7 +3,7 @@
 .text
 addi $s1,$zero,-15       #初始值
 bltz_branch:
-add $a0,$0,$s1          
+add $a0,$0,$s1          # $a0=-15
 addi $v0,$zero,34         
 syscall                  #输出当前值
 addi $s1,$s1,1 
