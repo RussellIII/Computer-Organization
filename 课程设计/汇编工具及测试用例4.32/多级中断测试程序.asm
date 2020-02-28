@@ -86,7 +86,7 @@ InteruptProgram1:
 #############################################################################################
 #  exceptoin 1
 #  ä½¿ç”¨?$s6? $s5?$s4?$s3?$s0?$a0?$v0
-sw $v0, 0($sp)
+sw $v0, 0($sp)#interruption 1
 addi $sp, $sp, 4
 sw $a0, 0($sp)
 addi $sp, $sp, 4
@@ -100,7 +100,7 @@ sw $s5, 0($sp)
 addi $sp, $sp, 4
 sw $s6, 0($sp)
 addi $sp, $sp, 4
-mfc0 $zero,$zero
+mfc0 $zero,$zero#¿ªÖĞ¶Ï
 ###
 
 addi $s6,$zero,1       #ä¸­æ–­?1,2,3   ä¸åŒä¸­æ–­å·æ˜¾ç¤???ä¸???
@@ -128,7 +128,7 @@ bne $s4, $zero, IntLoop1
 # syscall                  # we are out of here. 
 
 ###
-mtc0 $zero,$zero
+mtc0 $zero,$zero #¹ØÖĞ¶Ï
 addi $sp, $sp, -4
 lw $s6, 0($sp)
 addi $sp, $sp, -4
@@ -149,7 +149,7 @@ InteruptProgram2:
 #############################################################################################
 #  exceptoin 2
 
-sw $v0, 0($sp)
+sw $v0, 0($sp)#interruption2
 addi $sp, $sp, 4
 sw $a0, 0($sp)
 addi $sp, $sp, 4
@@ -163,7 +163,7 @@ sw $s5, 0($sp)
 addi $sp, $sp, 4
 sw $s6, 0($sp)
 addi $sp, $sp, 4
-mfc0 $zero,$zero
+mfc0 $zero,$zero#¿ªÖĞ¶Ï
 addi $s6,$zero,2       #ä¸­æ–­?1,2,3   ä¸åŒä¸­æ–­å·æ˜¾ç¤???ä¸???
 
 addi $s4,$zero,3      #å¾ªç¯æ¬¡æ•°åˆå§‹?  
@@ -189,7 +189,7 @@ bne $s4, $zero, IntLoop2
 # syscall                  # we are out of here. 
 
 ###
-mtc0 $zero,$zero
+mtc0 $zero,$zero#¹ØÖĞ¶Ï
 addi $sp, $sp, -4
 lw $s6, 0($sp)
 addi $sp, $sp, -4
@@ -210,7 +210,7 @@ InteruptProgram3:
 #############################################################################################
 #  exceptoin 
 
-sw $v0, 0($sp)
+sw $v0, 0($sp)#interruption3
 addi $sp, $sp, 4
 sw $a0, 0($sp)
 addi $sp, $sp, 4
@@ -224,7 +224,7 @@ sw $s5, 0($sp)
 addi $sp, $sp, 4
 sw $s6, 0($sp)
 addi $sp, $sp, 4
-mfc0 $zero,$zero
+mfc0 $zero,$zero#¿ªÖĞ¶Ï
 addi $s6,$zero,3       #ä¸­æ–­?1,2,3   ä¸åŒä¸­æ–­å·æ˜¾ç¤???ä¸???
 
 addi $s4,$zero,3      #å¾ªç¯æ¬¡æ•°åˆå§‹?  
@@ -249,7 +249,7 @@ bne $s4, $zero, IntLoop
 # syscall                  # we are out of here.
 
 ###
-mtc0 $zero,$zero
+mtc0 $zero,$zero#¹ØÖĞ¶Ï
 addi $sp, $sp, -4
 lw $s6, 0($sp)
 addi $sp, $sp, -4
