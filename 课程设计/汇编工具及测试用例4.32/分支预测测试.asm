@@ -4,7 +4,7 @@
 .text
  addi $s1,$zero, 5   #循环次数
  
- j jmp_next1         #载入BHT,BHT有1个表项 
+ j jmp_next1         #载入BHT,BHT有1个表项 要跳不跳
  addi $s1,$zero, 1
  addi $s2,$zero, 2
  addi $s3,$zero, 3
@@ -59,9 +59,7 @@ jmp_next7:
 
 jmp_next8:
  addi $s1,$s1, -1    
- bne $s1,$0, jmp_next2   
- 
- #载入BHT,BHT满，应淘汰 j jmp_next1，后续多次执行，跳转有成功有失败
+ bne $s1,$0, jmp_next2   #载入BHT,BHT满，应淘汰 j jmp_next1，后续多次执行，跳转有成功有失败
 
  addi $s0,$zero,1
  addi $s2,$zero,255
