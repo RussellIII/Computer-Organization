@@ -291,7 +291,7 @@ sort_next:
  addi $s1,$zero,60
  bne $s0, $s1, sort_loop
 
- addi   $v0,$zero,50         # system call for exit
+ addi   $v0,$zero,10         # system call for exit
  syscall                  # we are out of here.   
  #MIPS处理器实现中请用停机指令实现syscall
 
